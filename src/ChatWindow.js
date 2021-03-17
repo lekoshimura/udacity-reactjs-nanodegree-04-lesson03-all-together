@@ -19,11 +19,11 @@ class ChatWindow extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
+    this.setState({currentText: ''});
     this.props.onSubmitCallback(
       this.props.user,
       this.state.currentText
     );
-    this.state.currentText = '';
   };
 
   render() {
